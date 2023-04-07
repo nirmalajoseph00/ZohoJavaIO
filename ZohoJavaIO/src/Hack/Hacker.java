@@ -22,6 +22,7 @@ public class Hacker
 			{
 				pw.println(element);
 			}
+			System.out.println("File Writing successful");
 			pw.close();
 		} 
 		catch (IOException e) 
@@ -51,6 +52,30 @@ public class Hacker
 		{
 			e.printStackTrace();
 		}
+		
+	}
+	
+	public ArrayList<String> writeFileToList()
+	{
+		ArrayList<String> fileData = new ArrayList<String>();
+		
+		try 
+		{
+			FileReader fr = new FileReader("history.txt");
+			BufferedReader br = new BufferedReader(fr);
+			String line;
+			while ((line = br.readLine()) != null)
+					fileData.add(line);
+			br.close();
+			
+		} 
+		catch (FileNotFoundException e) 
+		{
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return (fileData);
 		
 	}
 	 

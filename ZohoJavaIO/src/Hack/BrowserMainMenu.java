@@ -23,7 +23,7 @@ public class BrowserMainMenu{
 		{
 			System.out.println("\n Main Menu \n 1.Visit URL \n 2.Go back in History \n 3.Go forward in History \n 4.Get url from position "
 					+ "\n 5.View Sorted Url \n 6.Delete \n 7.Fetch History \n 8.Search Extension \n 9.Size \n 10.Update History "
-					+ "\n 11.Write to File \n 12.Read File \n 13.Quit");
+					+ "\n 11.Write to File \n 12.Read File \n 13.Write File to List \n 14.Quit");
 			System.out.println("Enter your choice: ");
 			choice = in.nextInt();
 			
@@ -98,6 +98,9 @@ public class BrowserMainMenu{
 				browserHistoryObject.readFile();
 				break;
 			case 13:
+				browserHistoryObject.writeToList();
+				break;
+			case 14:
 				System.out.println("Do you want to continue(Y/N): ");
 				c=in.next().charAt(0);
 				break;

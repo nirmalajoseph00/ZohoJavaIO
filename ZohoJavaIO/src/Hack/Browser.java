@@ -15,7 +15,6 @@ import java.util.TreeSet;
 class Reference
 {
 	public static int currentPosition=-1;
-	public static int filePosition=0;
 }
 
 interface Shortcuts {
@@ -231,6 +230,13 @@ class Browser {
 		public void readFile()
 		{
 			hackerObject.readHistoryFile();
+		}
+		public void writeToList()
+		{
+			ArrayList<String> fileData = new ArrayList<String>();
+			fileData=hackerObject.writeFileToList();
+			url=fileData;
+			fetchHistory();
 		}
 		
 	  }
